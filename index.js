@@ -29,9 +29,9 @@ nyscl.use(bodyParser.urlencoded({ extended: true}));
 
 
 //dataBase connection
-mongoose.connect(process.env.CONNSTRING)
-.then(() => console.log("Database connected successful!"))
-.catch(() => console.log("Error connecting to database!"));
+// mongoose.connect(process.env.CONNSTRING)
+// .then(() => console.log("Database connected successful!"))
+// .catch(() => console.log("Error connecting to database!"));
 
 //App entry point
 nyscl.use("/auth", authRouter);
