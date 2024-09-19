@@ -1,0 +1,114 @@
+
+.hompage_header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.homepage_greetings {
+    font-weight: bold;
+}
+
+.left-user-icon {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    background-color: #2fff13e6;
+}
+
+.logo, .logo a {
+    padding: 0.8%;
+    color: #000;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+
+
+/* Acct block styling start */
+.acct_info {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient( #d4ff13e6,#2fff13e6);
+}
+
+.acct_info_label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.acct_info .main_bal {
+    color: #fff;
+    font-weight: bolder;
+    margin: 2px 0px 0px;
+}
+
+.witdep {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.witdep .withdraw {
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.witdep .deposit {
+    padding: 5px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #000;
+}
+/* Acct block styling end */
+
+
+
+/* tasks styling start */
+.task_block {
+    width: 100%;
+}
+/* tasks styling end */
+
+
+
+
+
+
+
+
+/* mennu action styling start */
+.menu-action-block {
+    width: 100%;
+    display: flex;
+    max-width: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon_box_block {
+    margin: 10px 20px;
+    text-align: center;
+}
+
+.icon_box {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #2fff13e6;
+}
+
+.icon_box_label {
+    font-size: 12px;
+    font-weight: bold;
+}
+/* mennu action styling end */

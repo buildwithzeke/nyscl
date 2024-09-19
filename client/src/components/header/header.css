@@ -1,0 +1,22 @@
+/* header styling start */
+.header_block {
+    margin: 50px auto 20px auto;
+}
+
+.header_image {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background: linear-gradient( #d4ff13e6,#2fff13e6);
+}
+
+.header_welcome_msg {
+    text-align: center;
+}
+
+.header_name {
+    font-weight: bolder;
+}
+/* header styling end */

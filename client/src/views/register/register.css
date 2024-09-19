@@ -1,0 +1,10 @@
+/* register styling start */
+.regBackLoginLink {
+    color: #000;
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+    justify-content: end;
+    text-decoration: none;
+}
+/* register styling end */

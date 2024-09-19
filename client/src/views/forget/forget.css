@@ -1,0 +1,10 @@
+/* forget page styling start */
+.forgetBackLogin {
+    color: #000;
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+    justify-content: end;
+    text-decoration: none;
+}
+/* forget page styling end */

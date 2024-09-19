@@ -1,0 +1,34 @@
+/* invite styling start */
+.invite_block {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    background: linear-gradient(#2fff13e6, #d4ff13e6);
+}
+
+.invite_label {
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+}
+
+.invite_box {
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.invite_code {
+    padding: 2%;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.invite_copy {
+    font-weight: bold;
+    font-size: 12px;
+}
+/* invite styling end */
