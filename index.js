@@ -29,9 +29,9 @@ nyscl.use(bodyParser.urlencoded({ extended: true}));
 
 
 //dataBase connection
-// mongoose.connect(process.env.CONNSTRING)
-// .then(() => console.log("Database connected successful!"))
-// .catch(() => console.log("Error connecting to database!"));
+mongoose.connect(process.env.CONNSTRING)
+.then(() => console.log("Database connected successful!"))
+.catch(() => console.log("Error connecting to database!"));
 
 //App entry point
 nyscl.use("/auth", authRouter);
@@ -40,9 +40,9 @@ nyscl.use("/auth", authRouter);
 nyscl.use(express.static(path.join(__dirname, '/client/build')));
 
 //not found routes
-// nyscl.use("*", (req, res) => {
-//     res.status(404).sendFile(path.join(__dirname + '/client/build',  'index.html'));
-// });
+nyscl.use("*", (req, res) => {
+    res.status(404).sendFile(path.join(__dirname + '/client/build',  'index.html'));
+});
 
 
 nyscl.listen(port , () => {
