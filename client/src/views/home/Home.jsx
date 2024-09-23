@@ -1,17 +1,22 @@
 import './home.css';
-
+import { useNavigate } from 'react-router-dom';
 
 //components
 import Invite from "../../components/invite/Invite";
 import FootNav from '../../components/footNav/FootNav';
 
 const Home = ({susMsg}) => {
+
+
+    // navigate
+    const navigate = useNavigate();
+
     return(
         <>
             {/* page header section */}
             <div className="hompage_header">
                 <small className='homepage_greetings'>Good day Ezekiel</small>
-                <div className="left-user-icon"> EA </div>
+                <div className="left-user-icon" onClick={() => { navigate("/profile") }}> EA </div>
             </div>
 
 
@@ -33,25 +38,23 @@ const Home = ({susMsg}) => {
                 <section id="menus">
                     <div className="menu-action-block">
 
-                        <div className="icon_box_block">
+                        <div onClick={() => { navigate("/send") }} className="icon_box_block">
                             <div className="icon_box"> o </div>
                             <span className="icon_box_label">Send</span>
                         </div>
 
-                        <div className="icon_box_block">
+                        <div onClick={() => { navigate("/loan") }} className="icon_box_block">
                             <div className="icon_box"> o </div>
                             <span className="icon_box_label">Loan</span>
                         </div>
 
-                        <div className="icon_box_block">
+                        <div onClick={() => { navigate("/recieve") }} className="icon_box_block">
                             <div className="icon_box"> o </div>
                             <span className="icon_box_label">Recieve</span>
                         </div>
 
                     </div>
                 </section>
-
-                <button onClick={ () => {susMsg("hello")}}>Notify!</button>
 
 
                 <section id="tasks">

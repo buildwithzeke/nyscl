@@ -1,0 +1,9 @@
+
+
+.profile_photo_block {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 20px auto;
+    background-color: red;
+}

@@ -1,35 +1,50 @@
 import './login.css';
-import { Link } from 'react-router-dom';
+import axios from 'axios';
 import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 // Components
 import Header from '../../components/header/Header';
 
 
-const Login = ({susMsg, errMsg}) => {
+const Login = ({ setIsLogin, susMsg, errMsg}) => {
 
     const[callup, setCallup] = useState("");
     const[pass, setPass] = useState("");
 
 
-    const handleCorperAuth = (e) => {
+    const navigate = useNavigate();
+
+
+    const handleCorperAuth = async (e) => {
         e.preventDefault();
 
-        if( !callup || !pass)return errMsg("All fields required!");
+        if( !callup || !pass) return errMsg("All fields required!");
 
-        const newCorps = {
+        const Corps = {
             callup,
             pass
         }
 
-        alert(`newCorps: {${newCorps.callup}, ${newCorps.pass}}`);
+        try{
+
+            const response = await  axios.post('http://127.0.0.1:5000/auth/login', Corps);
+            setIsLogin(true);
+            navigate("/");
+            susMsg(response.data.msg);
+          
+
+        }catch(e){
+            errMsg(e.response.data.msg);
+        }
     }
 
 
     return (
         <>
 
-            {/* <!-- page header section --> */}
+            {/* page header section */}
             <Header />
 
 

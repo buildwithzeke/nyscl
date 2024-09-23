@@ -1,11 +1,10 @@
 import './register.css';
 import axios from 'axios';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 // Components
 import Header from '../../components/header/Header';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-
 
 const Register = ({susMsg, errMsg}) => {
 
@@ -13,6 +12,8 @@ const Register = ({susMsg, errMsg}) => {
     const[email, setEmail] = useState("");
     const[pass, setPass] = useState("");
 
+    
+    const navigate = useNavigate();
 
     const handleCorperReg = async (e) => {
         e.preventDefault();
@@ -27,8 +28,10 @@ const Register = ({susMsg, errMsg}) => {
 
         try{
 
-          const response = await  axios.post('http://127.0.0.1:5000/auth/register', newCorps);
-          susMsg(response.data.msg);
+            const response = await  axios.post('http://127.0.0.1:5000/auth/register', newCorps);
+            navigate("/login");
+            susMsg(response.data.msg);
+          
 
         }catch(e){
             errMsg(e.response.data.msg);

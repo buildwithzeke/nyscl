@@ -1,0 +1,13 @@
+
+.header2_block {
+    padding: 20px;
+    display: flex;
+    font-weight: bold;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+}
+
+.header_title{
+    margin-left: 10px;
+}
