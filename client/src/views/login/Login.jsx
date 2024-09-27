@@ -29,7 +29,7 @@ const Login = ({ setIsLogin, susMsg, errMsg}) => {
 
         try{
 
-            const response = await  axios.post('http://127.0.0.1:5000/auth/login', Corps);
+            const response = await  axios.post(`${process.env.REACT_APP_BACKEND_API_BASE_URL}/auth/login`, Corps);
             setIsLogin(true);
             navigate("/");
             susMsg(response.data.msg);

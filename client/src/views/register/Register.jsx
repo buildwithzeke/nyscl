@@ -28,7 +28,7 @@ const Register = ({susMsg, errMsg}) => {
 
         try{
 
-            const response = await  axios.post('http://127.0.0.1:5000/auth/register', newCorps);
+            const response = await  axios.post(`${process.env.REACT_APP_BACKEND_API_BASE_URL}/auth/register`, newCorps);
             navigate("/login");
             susMsg(response.data.msg);
           
