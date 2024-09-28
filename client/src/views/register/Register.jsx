@@ -1,5 +1,5 @@
 import './register.css';
-import axios from 'axios';
+import { Axios } from '../../../config.js';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -28,7 +28,7 @@ const Register = ({susMsg, errMsg}) => {
 
         try{
 
-            const response = await  axios.post(`${process.env.REACT_APP_BACKEND_API_BASE_URL}/auth/register`, newCorps);
+            const response = await  Axios.post(`/auth/register`, newCorps);
             navigate("/login");
             susMsg(response.data.msg);
           

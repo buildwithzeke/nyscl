@@ -1,5 +1,5 @@
 import './login.css';
-import axios from 'axios';
+import { Axios } from '../../../config.js';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -29,7 +29,7 @@ const Login = ({ setIsLogin, susMsg, errMsg}) => {
 
         try{
 
-            const response = await  axios.post(`${process.env.REACT_APP_BACKEND_API_BASE_URL}/auth/login`, Corps);
+            const response = await  Axios.post(`/auth/login`, Corps);
             setIsLogin(true);
             navigate("/");
             susMsg(response.data.msg);
