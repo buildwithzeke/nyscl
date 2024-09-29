@@ -29,7 +29,7 @@ const Login = ({ setIsLogin, susMsg, errMsg}) => {
 
         try{
 
-            const response = await  Axios.post(`/auth/login`, Corps);
+            const response = await Axios.post(`/auth/login`, Corps);
             setIsLogin(true);
             navigate("/");
             susMsg(response.data.msg);

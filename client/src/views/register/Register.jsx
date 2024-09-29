@@ -28,7 +28,7 @@ const Register = ({susMsg, errMsg}) => {
 
         try{
 
-            const response = await  Axios.post(`/auth/register`, newCorps);
+            const response = await Axios.post(`/auth/register`, newCorps);
             navigate("/login");
             susMsg(response.data.msg);
           
