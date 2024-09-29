@@ -1,5 +1,5 @@
 import './login.css';
-import { Axios } from '../../../config.js';
+import { Axios } from '../../config.js';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
